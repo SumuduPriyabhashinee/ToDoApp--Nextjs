@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ToDoList from '../components/todolist';
 
-export default function Home() {
+export default function Home({todolist}) {
+  console.log(todolist)
   return (
     <div className={styles.container}>
       <Head>
@@ -11,22 +12,24 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <div>
+      <h1>This is index</h1>
 
-      </div>
+      <ToDoList todolist={todolist}/>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+       
       </footer>
     </div>
   )
 }
+
+export const getStaticProps=async()=>{
+  const res=await fetch('https://60a21a08745cd70017576014.mockapi.io/api/v1/todo')
+  const todolist =await res.json();
+
+  return{
+      props:{
+          todolist
+      }
+  }
+} 

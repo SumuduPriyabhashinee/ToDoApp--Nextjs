@@ -1,16 +1,12 @@
 import Head from 'next/head'
 import Navb from './Nav'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-const ToDoApp = () =>{
+const ToDoApp = ({children}) =>{
     return(
 <div>
-    <Head>
-    <link rel="icon" href="/logo.png" />
-    <title>To Do App</title>
-    </Head>
     <Navb/>
-    <h1>ToDoApp</h1>
+    <h1>ToDoList</h1>
+    <main>{children}</main>
 </div>
     )
 }

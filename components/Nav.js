@@ -18,18 +18,18 @@ const Navb = () =>{
 
       return (
         <Navbar bg="dark" variant="dark">
-      <div class="col-2">
+      <div className="col-2">
       <Image src="/logo.png" alt="Logo" width={72} height={72} />
         </div>
-        <div class="col-3">
+        <div className="col-3">
         <div className={navStyles.t1}>To Do App</div>
         </div>
         <div class="col-1">
         </div>
-        <div class="col-6">
-    <button type="button" class="btn btn-outline-warning " onClick={clickHome}>Home</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-outline-warning " onClick={clickToDoList}>To Do List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-outline-warning " onClick={clickNew}>Add New</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div className="col-6">
+    <button type="button" className="btn btn-outline-warning " onClick={clickHome}>Home</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" className="btn btn-outline-warning " onClick={clickToDoList}>To Do List</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" className="btn btn-outline-warning " onClick={clickNew}>Add New</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
     </Navbar>
       );
